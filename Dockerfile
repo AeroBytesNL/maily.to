@@ -14,6 +14,9 @@ WORKDIR /app/packages/render
 RUN pnpm install && pnpm add @tiptap/core
 
 WORKDIR /app/apps/web
+
+RUN pnpm add @maily-to/core
+
 RUN pnpm install
 
 EXPOSE 3000
