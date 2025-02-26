@@ -10,10 +10,10 @@ COPY . .
 
 WORKDIR /app/apps/web
 
-RUN apk add --no-cache curl wget
-
 RUN pnpm install
+
+RUN pnpm run build
 
 EXPOSE 3000
 
-CMD ["pnpm", "dev"]
+CMD ["pnpm", "run", "start"]
