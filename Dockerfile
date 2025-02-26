@@ -8,7 +8,7 @@ RUN npm install -g pnpm
 
 COPY . .
 
-WORKDIR /app/apps/web
+WORKDIR /apps/web
 
 RUN pnpm install
 
