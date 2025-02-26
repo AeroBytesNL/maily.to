@@ -4,14 +4,15 @@ WORKDIR /app
 
 COPY package.json pnpm-lock.yaml ./
 
-RUN npm install -g pnpm && pnpm install --frozen-lockfile
+RUN npm install -g pnpm
 
 RUN apk add --no-cache curl wget
 
 COPY . .
 
 WORKDIR /app/packages/render
-RUN pnpm install && pnpm add @tiptap/core
+
+RUN pnpm add @tiptap/core
 
 WORKDIR /app/apps/web
 
