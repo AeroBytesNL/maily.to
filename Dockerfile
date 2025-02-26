@@ -8,6 +8,8 @@ RUN npm install -g pnpm
 
 RUN apk add --no-cache curl wget
 
+RUN pnpm add @maily-to/core
+
 COPY . .
 
 WORKDIR /app/packages/render
