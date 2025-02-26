@@ -6,11 +6,11 @@ COPY package.json pnpm-lock.yaml ./
 
 RUN npm install -g pnpm
 
-RUN pnpm install
-
 COPY . .
 
 WORKDIR /app/apps/web
+
+RUN pnpm install
 
 RUN pnpm run build
 
