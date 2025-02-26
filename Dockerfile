@@ -10,6 +10,8 @@ COPY . .
 
 WORKDIR /app/apps/web
 
+RUN apk add --no-cache curl wget
+
 RUN pnpm install
 
 EXPOSE 3000
