@@ -8,6 +8,10 @@ RUN npm install -g pnpm
 
 COPY . .
 
+WORKDIR /app/packages/render
+
+RUN  pnpm add @tiptap/core
+
 WORKDIR /app/apps/web
 
 RUN pnpm install
