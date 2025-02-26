@@ -14,7 +14,4 @@ RUN pnpm install
 
 EXPOSE 3000
 
-RUN pnpm dev
-
-
-
+CMD ["pnpm", "dev"]
