@@ -14,6 +14,6 @@ RUN pnpm install
 
 EXPOSE 3000
 
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD curl -f http://78.46.134.87:3000/ || exit 1
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD curl -f https://aerobytes.nl || exit 1
 
 CMD ["pnpm", "dev", "--host"]
